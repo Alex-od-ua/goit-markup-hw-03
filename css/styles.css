@@ -12,20 +12,62 @@ body {
   background: var(--main-background-color);
 }
 
-.list-style {
-  list-style: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
-.text-decor {
+.list-style {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.decor {
   text-decoration: none;
 }
 
 .hover-style:hover,
 hover-style:focus {
   color: var(--accent-color);
+  text-decoration: none;
+}
+
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
 }
 
 /* Шапка общая*/
+
+.header-style {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item {
+  /* margin-right: 50px; */
+  outline: 2px solid tomato;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
 
 .logo {
   font-family: 'Raleway';
@@ -40,21 +82,37 @@ hover-style:focus {
   color: var(--accent-color);
 }
 
-.contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--second-text-color);
-}
-
 .link-style {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.contacts .contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+  text-decoration: none;
 }
 
 /* Основной контент - главная */
@@ -74,7 +132,7 @@ hover-style:focus {
 }
 
 .hero-section-button {
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   cursor: pointer;
   font-weight: 700;
@@ -84,6 +142,8 @@ hover-style:focus {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 
 .hero-section-button:hover,
@@ -150,6 +210,10 @@ hover-style:focus {
 
 /* Основной контент - портфолио*/
 
+.button-list {
+  display: flex;
+}
+
 .main-section-button {
   font-family: 'Roboto';
   font-style: inherit;
@@ -195,6 +259,7 @@ hover-style:focus {
   font-size: 26px;
   line-height: 1.19;
   color: var(--white-text-color);
+  text-decoration: none;
 }
 
 .footer-logo-accent {
@@ -217,4 +282,8 @@ hover-style:focus {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.list-style a {
+  text-decoration: none;
 }
