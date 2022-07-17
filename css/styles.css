@@ -10,7 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   background: var(--main-background-color);
-  /* width: 1600px; */
+  width: 1600px;
 }
 
 h1,
@@ -47,6 +47,11 @@ hover-style:focus {
   margin-left: auto;
   margin-right: auto;
   /* outline: 2px solid tomato; */
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Шапка общая*/
@@ -123,16 +128,23 @@ hover-style:focus {
 
 .hero-section {
   background: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-section-title {
+  font-style: n400;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  /* padding-top: 200px; */
+  padding-bottom: 30px;
 }
 
 .hero-section-button {
@@ -148,12 +160,30 @@ hover-style:focus {
   color: var(--primary-text-color);
   border-radius: 4px;
   padding: 10px 32px;
+  border: 1px solid transparent;
 }
 
 .hero-section-button:hover,
 .hero-section-button:focus {
   background-color: #2196f3;
   color: var(--white-text-color);
+}
+
+/* skill-section */
+
+.skill-section-list {
+  width: 270px;
+  flex-wrap: wrap;
+  /* margin-right: 30px; */
+}
+
+.skill-section-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.skill-section .list-style {
+  display: flex;
+  /* outline: 2px solid tomato; */
 }
 
 .skill-section-title {
@@ -172,6 +202,12 @@ hover-style:focus {
   color: var(--second-text-color);
 }
 
+/* work-section */
+
+.work-section {
+  padding-top: 0px;
+}
+
 .work-section-title {
   font-style: normal;
   font-weight: 700;
@@ -181,8 +217,35 @@ hover-style:focus {
   letter-spacing: 0.03em;
 }
 
+.work-section .list-style {
+  display: flex;
+  margin-top: 50px;
+  /* outline: 2px solid tomato; */
+}
+
+.work-section-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* team-section */
+
 .team-section {
   background: #f5f4fa;
+}
+
+.team-section .list-style {
+  display: flex;
+  margin-top: 50px;
+  /* outline: 2px solid tomato; */
+}
+
+.team-section-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-section-item {
+  border-radius: 0px 0px 4px 4px;
+  background: #ffffff;
 }
 
 .team-section-title {
@@ -202,6 +265,7 @@ hover-style:focus {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 30px;
 }
 
 .team-section-text {
@@ -210,14 +274,11 @@ hover-style:focus {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 /* Основной контент - портфолио*/
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .button-list {
   display: flex;
@@ -233,7 +294,6 @@ hover-style:focus {
   padding: 6px 22px;
   background: #f5f4fa;
   border-radius: 4px;
-  border: none;
 
   font-family: 'Roboto';
   font-style: inherit;
@@ -242,6 +302,7 @@ hover-style:focus {
   line-height: 1.62;
   color: var(--primary-text-color);
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .main-section-button:hover,
